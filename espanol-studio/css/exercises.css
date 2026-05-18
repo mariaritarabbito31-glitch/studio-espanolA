@@ -1,0 +1,190 @@
+/* css/exercises.css */
+
+/* ── EXERCISE SECTION ── */
+.exercise-section {
+  margin-bottom: var(--space-8);
+}
+
+.exercise-section-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.exercise-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── EXERCISE CARD ── */
+.exercise-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-3);
+  transition: border-color var(--transition-fast);
+}
+.exercise-card:focus-within {
+  border-color: var(--gold);
+}
+
+.exercise-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+
+.prompt-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+/* ── INPUTS ── */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 14px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  background: var(--cream);
+  color: var(--ink);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+}
+textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.6;
+}
+
+/* Inline blank input */
+.blank-input {
+  display: inline-block;
+  width: 150px;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  background: transparent;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color var(--transition-fast);
+  margin: 0 4px;
+  vertical-align: baseline;
+}
+.blank-input:focus {
+  border-bottom-color: var(--amber);
+}
+
+/* ── QUIZ OPTIONS ── */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.quiz-opt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  user-select: none;
+}
+.quiz-opt:hover {
+  background: var(--gold-light);
+  border-color: var(--gold);
+}
+.quiz-opt input[type="radio"] {
+  accent-color: var(--gold);
+  width: 15px; height: 15px;
+  flex-shrink: 0;
+}
+.quiz-opt.selected {
+  background: var(--gold-light);
+  border-color: var(--gold);
+}
+.quiz-opt.correct {
+  background: var(--sage-light);
+  border-color: var(--sage);
+  color: var(--sage);
+}
+.quiz-opt.wrong {
+  background: var(--rose-light);
+  border-color: var(--rose);
+  color: var(--rose);
+}
+
+/* ── FEEDBACK ── */
+.feedback {
+  margin-top: var(--space-3);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.83rem;
+  line-height: 1.5;
+  display: none;
+}
+.feedback.show         { display: block; animation: fadeIn 0.2s ease; }
+.feedback.fb-correct   { background: var(--sage-light); color: var(--sage); }
+.feedback.fb-wrong     { background: var(--rose-light); color: var(--rose); }
+.feedback.fb-neutral   { background: var(--sky-light);  color: var(--sky); }
+
+/* ── AI CORRECTION BOX ── */
+.correction-box {
+  background: var(--sky-light);
+  border: 1px solid #a0c4e8;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: #1a4060;
+  white-space: pre-wrap;
+  margin-top: var(--space-3);
+  animation: fadeIn 0.2s ease;
+}
+
+/* ── MARK DONE BANNER ── */
+.done-banner {
+  background: var(--sage-light);
+  border: 1px solid var(--sage);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  font-size: 0.88rem;
+  color: var(--sage);
+  font-weight: 500;
+}
+.done-banner img {
+  flex-shrink: 0;
+  filter: sepia(1) saturate(4) hue-rotate(80deg);
+}

@@ -1,0 +1,65 @@
+/* css/variables.css — Design tokens */
+:root {
+  /* ── Palette ── */
+  --ink:          #1a1a2e;
+  --ink-80:       rgba(26, 26, 46, 0.8);
+  --cream:        #f5f0e8;
+  --surface:      #fffef9;
+  --border:       #e0d8c8;
+  --muted:        #8a8070;
+
+  --gold:         #c9a84c;
+  --gold-light:   #f0dfa0;
+  --gold-dim:     rgba(201, 168, 76, 0.12);
+
+  --sage:         #4a7c59;
+  --sage-light:   #d6ead8;
+
+  --sky:          #2d6a9f;
+  --sky-light:    #d0e4f5;
+
+  --amber:        #b5681e;
+  --amber-light:  #fff0cc;
+
+  --rose:         #a0344a;
+  --rose-light:   #fad4d4;
+
+  --sidebar-bg:   #12121f;
+  --sidebar-border: #1e1e38;
+  --sidebar-text: #c8c0b0;
+  --sidebar-muted:#4a4860;
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
+
+  /* ── Spacing ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ── Radii ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.18);
+
+  /* ── Layout ── */
+  --sidebar-width: 280px;
+  --header-height: 64px;
+
+  /* ── Transitions ── */
+  --transition-fast: 0.15s ease;
+  --transition-med:  0.25s ease;
+}

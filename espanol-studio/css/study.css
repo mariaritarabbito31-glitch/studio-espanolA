@@ -1,0 +1,176 @@
+/* css/study.css — Day header, tabs, explanation panel */
+
+/* ── DAY HEADER ── */
+.day-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.level-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.badge-b1  { background: var(--sage-light);  color: var(--sage); }
+.badge-b2  { background: var(--sky-light);   color: var(--sky); }
+.badge-rep { background: var(--rose-light);  color: var(--rose); }
+.badge-lib { background: #ebebeb;            color: var(--muted); }
+
+.day-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.day-schedule {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 5px;
+  letter-spacing: 0.03em;
+}
+
+/* ── TABS ── */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: var(--space-6);
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.tab-btn img {
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+.tab-btn:hover { color: var(--ink); }
+.tab-btn:hover img { opacity: 0.8; }
+.tab-btn.active {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+  font-weight: 600;
+}
+.tab-btn.active img { opacity: 1; }
+
+/* ── PANELS ── */
+.panel { display: none; }
+.panel.active { display: block; animation: fadeIn 0.2s ease; }
+
+/* ── LOADING STATE ── */
+.loading-msg {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ── EXPLANATION CARD ── */
+.explanation-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-8);
+  margin-bottom: var(--space-5);
+}
+
+.explanation-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-4);
+  color: var(--ink);
+}
+
+.section-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 600;
+  margin: var(--space-5) 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rule-text {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+.example-block {
+  background: var(--amber-light);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-4) 0;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: var(--amber);
+  white-space: pre-wrap;
+}
+
+.warning-block {
+  background: var(--rose-light);
+  border-left: 3px solid var(--rose);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-4) 0;
+  font-size: 0.84rem;
+  line-height: 1.7;
+  color: var(--rose);
+  white-space: pre-wrap;
+}
+
+/* ── SCORE BAR ── */
+.score-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+}
+.score-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold);
+  line-height: 1;
+}
+.score-meta { flex: 1; }
+.score-label { font-size: 0.75rem; color: var(--muted); }
+.score-max   { font-size: 0.7rem; color: var(--muted); }
